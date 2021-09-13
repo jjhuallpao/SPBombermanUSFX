@@ -139,7 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bomba.cpp" />
+    <ClCompile Include="Bomber.cpp" />
+    <ClCompile Include="Enemigo.cpp" />
+    <ClCompile Include="MuroDestruible.cpp" />
+    <ClCompile Include="MuroIndestructible.cpp" />
     <ClCompile Include="principal.cpp" />
+    <ClCompile Include="Puerta.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bomba.h" />
+    <ClInclude Include="Bomber.h" />
+    <ClInclude Include="Enemigo.h" />
+    <ClInclude Include="MuroDestruible.h" />
+    <ClInclude Include="MuroIndestructible.h" />
+    <ClInclude Include="Puerta.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
