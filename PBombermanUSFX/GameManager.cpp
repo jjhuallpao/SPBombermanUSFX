@@ -115,16 +115,19 @@ int GameManager::onExecute() {
 		Bomber* b1 = new Bomber(texturaBomber1);
 		Bomber* b2 = new Bomber(texturaBomber2);
 
-		for (int i = 0; i <= 100; i++) {
-			MuroMetalico* mm = new MuroMetalico(texturaMuroMetalico);
-			mm->setImagenX(0);
-			mm->setImagenY(0);
-			mm->setAncho(30);
-			mm->setAlto(30);
-			mm->setPosicionX(0);
-			mm->setPosicionY(0);
+		for (int i = 0; i <= SCREEN_HEIGHT; i++) {
+			for (int j = 0; j <= SCREEN_WIDTH; j++) {
+				MuroMetalico* mm = new MuroMetalico(texturaMuroMetalico);
+				mm->setImagenX(0);
+				mm->setImagenY(0);
+				mm->setAncho(30);
+				mm->setAlto(30);
+				mm->setPosicionX(30*i);
+				mm->setPosicionY(30*j);
 
-			muroMetalico.push_back(mm);
+				muroMetalico.push_back(mm);
+				mm = nullptr;
+			}
 		}
 		/*MuroMetalico* mm1 = new MuroMetalico(texturaMuroMetalico);
 		MuroMetalico* mm2 = new MuroMetalico(texturaMuroMetalico);
@@ -178,9 +181,11 @@ int GameManager::onExecute() {
 				((GameActor*)actoresJuego[i])->setPosicionY(rand() % SCREEN_HEIGHT);*/
 
 				actoresJuego[i]->render();
+				
 			}
 			
 			for(int i = 0; i < muroMetalico.size(); i++) {
+
 				muroMetalico[i]->render();
 			}
 
