@@ -1,9 +1,15 @@
 #include <iostream>
+#include "GameManager.h"
+//#include "Bomber.h"
+//#include "GameObject.h"
+//#include "GameActor.h"
+//#include "Detonador.h"
+
 using namespace std;
 
-int main() {
+int main(int argc, char* args[])
+{
+	GameManager* gm01 = new GameManager();
 	
-	cout << "Primer paso rumbo a Bomberman"<<endl;
-
-	return 0;
+	return gm01->onExecute();
 }
