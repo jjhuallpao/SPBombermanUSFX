@@ -5,8 +5,8 @@ GameActor::GameActor(Texture* _textura) :GameObject() {
 	posicionY = 0;
 	imagenX = 0;
 	imagenY = 0;
-	ancho = 25;
-	alto = 25;
+	ancho = 34;
+	alto = 34;
 
 	solido = true;
 	indestructible = false;

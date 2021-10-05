@@ -1,9 +1,9 @@
 #pragma once
 #include "GameActor.h"
-class MuroMetalico :
+class MuroCeramica :
     public GameActor
 {
 public:
-    MuroMetalico(Texture* _textura);
+    MuroCeramica(Texture* _textura);
 };
 

@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4B74975B-6798-4FAA-B794-AB0D883F0CBE}</ProjectGuid>
+    <ProjectGuid>{b4b2c2b6-a909-4d8a-89bd-370490ad35c9}</ProjectGuid>
     <RootNamespace>PBomberManUSFX</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -150,9 +150,12 @@
     <ClCompile Include="GameDirecctions.h" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="MapGenerator.cpp" />
     <ClCompile Include="Muro.cpp" />
-    <ClCompile Include="MuroMetalico.cpp" />
+    <ClCompile Include="MuroCeramica.cpp" />
+    <ClCompile Include="MuroMetal.cpp" />
     <ClCompile Include="principal.cpp" />
+    <ClCompile Include="SueloCesped.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -163,13 +166,15 @@
     <ClInclude Include="GameActor.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="MapGenerator.h" />
     <ClInclude Include="Muro.h" />
-    <ClInclude Include="MuroMetalico.h" />
+    <ClInclude Include="MuroCeramica.h" />
+    <ClInclude Include="MuroMetal.h" />
+    <ClInclude Include="SueloCesped.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\bomber.bmp" />
-    <Image Include="resources\muro_metalico.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

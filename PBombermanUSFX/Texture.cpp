@@ -1,5 +1,7 @@
 #include "Texture.h"
 
+SDL_Renderer* Texture::renderer = nullptr;
+
 Texture::Texture() {
 	texturaSDL = nullptr;
 	renderer = nullptr;

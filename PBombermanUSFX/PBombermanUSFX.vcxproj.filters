@@ -48,7 +48,16 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="MuroMetalico.cpp">
+    <ClCompile Include="MuroMetal.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="MapGenerator.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="MuroCeramica.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="SueloCesped.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,15 +89,21 @@
     <ClInclude Include="Texture.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="MuroMetalico.h">
+    <ClInclude Include="MuroMetal.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MapGenerator.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MuroCeramica.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="SueloCesped.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\bomber.bmp">
-      <Filter>Archivos de recursos</Filter>
-    </Image>
-    <Image Include="resources\muro_metalico.bmp">
       <Filter>Archivos de recursos</Filter>
     </Image>
   </ItemGroup>

@@ -8,8 +8,8 @@ private:
 	int  idGameObject;
 	string nombre;
 	bool eliminar;
-
 public:
+	static int numeroGameObjectCreados;
 	GameObject();
 	GameObject(string _nombre);
 

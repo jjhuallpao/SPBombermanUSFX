@@ -10,7 +10,8 @@ private:
 	SDL_Texture* texturaSDL;
 	int ancho;
 	int alto;
-	SDL_Renderer* renderer;
+public:
+	static SDL_Renderer* renderer;
 
 public:
 	Texture();
