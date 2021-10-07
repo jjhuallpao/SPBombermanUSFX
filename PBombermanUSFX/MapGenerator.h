@@ -4,10 +4,12 @@
 #include <fstream>
 #include <string>
 #include "GameObject.h"
-#include "Bomber.h"
+#include "Bomberman.h"
 #include "MuroCeramica.h"
 #include "MuroMetal.h"
 #include "SueloCesped.h"
+#include "Tile.h"
+#include "TilesGraph.h"
 
 class MapGenerator
 {
@@ -16,7 +18,7 @@ private:
 	int anchoPantalla;
 	int altoPantalla;
 	SDL_Renderer* renderer;
-
+	TilesGraph* tilesGraph;
 public:
 	// Constructores y destructores
 	MapGenerator();

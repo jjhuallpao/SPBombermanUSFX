@@ -7,9 +7,10 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
-#include "Bomber.h"
+#include "Bomberman.h"
 #include "MuroMetal.h"
 #include "MapGenerator.h"
+#include "system/KeyboardInput.h"
 
 using namespace std;
 
@@ -30,6 +31,8 @@ private:
        
     vector<GameObject*> actoresJuego;
     MapGenerator* generadorMapa;
+    KeyboardInput* keyboardInput;
+
 
     SDL_Event evento;
     bool enEjecucion;

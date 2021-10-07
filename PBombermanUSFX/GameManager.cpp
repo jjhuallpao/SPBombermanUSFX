@@ -5,6 +5,7 @@ GameManager::GameManager() {
 	gWindow = nullptr;
 	gRenderer = nullptr;
 	generadorMapa = nullptr;
+	keyboardInput = KeyboardInput::Instance();
 	enEjecucion = true;
 }
 
@@ -21,7 +22,7 @@ bool GameManager::onInit() {
 	else
 	{
 		//Create window
-		gWindow = SDL_CreateWindow("Bomber Man USFX", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+		gWindow = SDL_CreateWindow("Bomberman Man USFX", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 		if (gWindow == nullptr)
 		{
 			cout << "Window could not be created! SDL_Error: " << SDL_GetError() << endl;
@@ -59,7 +60,7 @@ bool GameManager::onInit() {
 bool GameManager::loadContent()
 {
 	generadorMapa = new MapGenerator(gRenderer, SCREEN_WIDTH, SCREEN_HEIGHT);
-	generadorMapa->crearObjetosJuego("resources/levels/level3.txt");
+	generadorMapa->crearObjetosJuego("resources/levels/level1.txt");
 	generadorMapa->transferirObjetosJuego(actoresJuego);
 
 	if (actoresJuego.size() > 0)
@@ -70,13 +71,32 @@ bool GameManager::loadContent()
 
 void GameManager::onEvent(SDL_Event* _event)
 {
+	if (_event->type == SDL_QUIT) {
+		enEjecucion = false;
+	}
+
+	switch (_event->type) {
+	case SDL_KEYDOWN:
+		keyboardInput->TurnKeyOn(_event->key.keysym.sym);
+		break;
+	case SDL_KEYUP:
+		keyboardInput->TurnKeyOff(_event->key.keysym.sym);
+
+		switch (_event->key.keysym.sym) {
+		case SDLK_f:
+			//SDL_SetWindowFullscreen(gWindow, SDL_WINDOW_FULLSCREEN);
+			break;
+		case SDLK_n:
+			//SDL_SetWindowFullscreen(gWindow, SDL_WINDOW_MAXIMIZED);
+			break;
+		}
+	}
 }
 
-
 void GameManager::onLoop() {
-	/*for (int i = 0; i < actoresJuego.size(); i++) {
+	for (int i = 0; i < actoresJuego.size(); i++) {
 		actoresJuego[i]->update();
-	}*/
+	}
 }
 
 void GameManager::onRender() {
